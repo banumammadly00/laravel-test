@@ -11,7 +11,7 @@
          <a href="{{ route('profile') }}"> <i class="icon-home"> </i> Profile </a>
       </li>
        <li class="">
-         <a href=""> <i class="icon-windows"></i> Gallery  </a>
+         <a href="{{ route('gallery') }}"> <i class="icon-windows"></i> Gallery  </a>
       </li>
        <li class="">
          <a href=""> <i class="icon-new-file"></i>  Articles </a>
