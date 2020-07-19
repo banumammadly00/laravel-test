@@ -1,5 +1,7 @@
 <?php
 
+use App\Gallery;
+use App\Http\Controllers\GalleryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +21,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::post('profile', 'ProfileController@update')->name('profile.update');
+
+Route::get('/gallery', 'GalleryController@index')->name('gallery');
+Route::post('/gallery','GalleryController@store')->name('gallery.upload');
+Route::delete('/gallery/{id}','GalleryController@delete')->name('gallery.delete');
+Route::delete('/gallery', 'GalleryController@bulkdelete')->name('gallery.bulkdelete');
+
+
+
