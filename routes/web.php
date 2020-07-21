@@ -27,5 +27,11 @@ Route::post('/gallery','GalleryController@store')->name('gallery.upload');
 Route::delete('/gallery/{id}','GalleryController@delete')->name('gallery.delete');
 Route::delete('/gallery', 'GalleryController@bulkdelete')->name('gallery.bulkdelete');
 
-
-
+Route::get('/articles', 'ArticlesController@index')->name('articles');
+Route::get('/articles/create', 'ArticlesController@create')->name('articles.create');
+Route::post('articles/create','ArticlesController@store' )->name('articles.store');
+Route::get('/articles/{id}', 'ArticlesController@edit')->name('articles.edit');
+Route::post('articles/{id}','ArticlesController@update' )->name('articles.update');
+Route::get('/articles/status/{id}', 'ArticlesController@updatestatus')->name('articles.status');
+Route::get('/articles/destroy/{id}', 'ArticlesController@destroy')->name('articles.destroy');
+Route::delete('/articles', 'ArticlesController@bulkdelete')->name('articles.bulkdelete');
