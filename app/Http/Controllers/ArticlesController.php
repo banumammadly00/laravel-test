@@ -19,9 +19,11 @@ class ArticlesController extends Controller
     public function index()
     {
         $articles= Articles::where('user_id', auth()->id())->orderBy('id', 'desc')->paginate(12);
+
         return view('articles.index', [
             'articles' => $articles
         ]);
+        //test
     }
 
 
@@ -44,7 +46,7 @@ class ArticlesController extends Controller
             'status'    =>  $request->status,
             'image'     =>  $request->image ? $request->image->getClientOriginalName() : '',
             'user_name' =>  $request->user_name,
-            'created'   =>   Carbon::now(),
+            'created'   =>  Carbon::now(),
             'updated'   =>  date("Y-m-d H:i", strtotime("$date $time")),
             'user_id'   =>  auth()->id()
         ]);

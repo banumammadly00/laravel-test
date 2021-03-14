@@ -10,7 +10,7 @@ class Users extends Model
     const CREATED_AT = null;
 
     protected $fillable = [
-        'email', 'name', 'mobile', 'role', 'birthday', 'about','image'
+        'email','pass', 'name', 'mobile', 'role', 'birthday', 'about','image'
     ];
 
     protected $casts = [
